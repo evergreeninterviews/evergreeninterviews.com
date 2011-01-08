@@ -1,0 +1,7 @@
+dm-evergreeninterviews () {
+    (
+        cd $VIRTUAL_ENV/src/evergreeninterviews.com
+        export DJANGO_SETTINGS_MODULE="evergreeninterviews.settings.local"
+        django-admin.py $@
+    )
+}

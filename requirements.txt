@@ -1,0 +1,1 @@
+-e git+https://github.com/evergreeninterviews/evergreen-whitebox.git@6e21e2a#egg=evergreen-whitebox

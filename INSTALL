@@ -1,0 +1,59 @@
+Prepare workstation
+===================
+
+- Python 2.6
+
+- virtualenvwrapper
+
+
+Prepare project environment
+===========================
+
+::
+
+    $ mkvirtualenv -p python2.6 --no-site-packages evergreen
+    $ workon evergreen
+    $ cd src
+    $ git clone https://github.com/evergreeninterviews/evergreeninterviews.com.git
+    $ cd evergreeninterviews.com
+    $ pip install -r requirements.txt
+    $ python setup.py develop
+
+Enable the ``dm-evergreeninterviews`` management command::
+
+    $ echo "source \$VIRTUAL_ENV/src/evergreeninterviews.com/bin/postactivate" >> $VIRTUAL_ENV/bin/postactivate
+    $ source bin/postactivate
+
+Create local settings::
+
+    $ cp evergreeninterviews/settings/local.py.sample evergreeninterviews/settings/local.py
+        # or
+    $ ln -sf local.py.sample evergreeninterviews/settings/local.py
+
+
+Create development database
+===========================
+
+::
+
+    # If you need to.
+    $ rm dev.db
+
+    # Automatically creates user "admin" / "admin"
+    $ dm-evergreeninterviews syncdb --noinput
+
+
+Run development server
+======================
+
+::
+
+    $ dm-evergreeninterviews runserver
+
+
+Starting points
+===============
+
+- http://localhost:8000/
+
+- http://localhost:8000/admin/ - log in as "admin" / "admin"
