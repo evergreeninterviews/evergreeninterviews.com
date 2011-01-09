@@ -1,4 +1,4 @@
-from evergreeninterviews.settings.common import *
+from evergreeninterviews.settings.base import *
 
 
 DEBUG = TEMPLATE_DEBUG = True
