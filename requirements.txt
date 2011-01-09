@@ -1,2 +1,2 @@
--e git+https://github.com/evergreeninterviews/evergreen-whitebox.git@3930feb#egg=evergreen-whitebox
+-e git+https://github.com/evergreeninterviews/evergreen-whitebox.git@8451250#egg=evergreen-whitebox
 fabric==0.9.3
