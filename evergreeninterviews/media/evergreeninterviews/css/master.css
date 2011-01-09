@@ -79,17 +79,17 @@ li {
 p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
   margin-bottom: 20px; }
 
-.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, #conversion-message, #content, .grid-9, .grid-10, .grid-11, .grid-12, #header, #footer, .grid-13, .grid-14, .grid-15, .grid-16 {
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, #conversion-message, #content, .grid-9, .grid-10, .grid-11, .grid-12, #userinfo, #header, #footer, .grid-13, .grid-14, .grid-15, .grid-16 {
   display: inline;
   float: left;
   position: relative;
   margin-left: 10px;
   margin-right: 10px; }
 
-.alpha, #header, #conversion-message, #content, #footer {
+.alpha, #userinfo, #header, #conversion-message, #content, #footer {
   margin-left: 0; }
 
-.omega, #header, #conversion-message, #content, #footer {
+.omega, #userinfo, #header, #conversion-message, #content, #footer {
   margin-right: 0; }
 
 .container-16 {
@@ -118,7 +118,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     width: 580px; }
   .container-16 .grid-11 {
     width: 640px; }
-  .container-16 .grid-12, .container-16 #header, .container-16 #footer {
+  .container-16 .grid-12, .container-16 #userinfo, .container-16 #header, .container-16 #footer {
     width: 700px; }
   .container-16 .grid-13 {
     width: 760px; }
@@ -275,7 +275,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     width: 780px; }
   .container-12 .grid-11, body .grid-11 {
     width: 860px; }
-  .container-12 .grid-12, body .grid-12, .container-12 #header, body #header, .container-12 #footer, body #footer {
+  .container-12 .grid-12, body .grid-12, .container-12 #userinfo, body #userinfo, .container-12 #header, body #header, .container-12 #footer, body #footer {
     width: 940px; }
   .container-12 .prefix-1, body .prefix-1 {
     padding-left: 80px; }
@@ -390,6 +390,11 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
 body {
   font-size: 20px; }
 
+#userinfo {
+  border-bottom: 2px solid lightgrey;
+  padding: 5px;
+  text-align: right; }
+
 #header {
   background-image: url("/static/evergreeninterviews/images/logo-940x126.png");
   background-position: 0px;
@@ -415,5 +420,18 @@ body {
 #footer {
   margin-top: 30px;
   padding-top: 5px;
-  border-top: thin solid lightgrey;
-  font-size: 14px; }
+  border-top: 2px solid lightgrey;
+  font-size: 10pt; }
+
+form p {
+  padding-left: 10em; }
+  form p label {
+    float: left;
+    display: block;
+    width: 10em;
+    margin-left: -10em; }
+form input[type="text"], form input[type="password"] {
+  font-size: 14pt;
+  display: block; }
+form input[type="submit"] {
+  font-size: 14pt; }

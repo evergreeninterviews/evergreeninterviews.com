@@ -10,8 +10,16 @@ body {
   font-size: 20px;
 }
 
-#header, #footer {
+#userinfo, #header, #footer {
   @extend .grid-12;
+}
+
+#userinfo {
+  @extend .alpha;
+  @extend .omega;
+  border-bottom: 2px solid lightgrey;
+  padding: $gutter / 2;
+  text-align: right;
 }
 
 #header {
@@ -62,6 +70,25 @@ body {
   @extend .omega;
   margin-top: 30px;
   padding-top: 5px;
-  border-top: thin solid lightgrey;
-  font-size: 14px;
+  border-top: 2px solid lightgrey;
+  font-size: 10pt;
+}
+
+form {
+  p {
+    label {
+      float: left;
+      display: block;
+      width: 10em;
+      margin-left: -10em;
+    }
+    padding-left: 10em;
+  }
+  input[type="text"], input[type="password"] {
+    font-size: 14pt;
+    display: block;
+  }
+  input[type="submit"] {
+    font-size: 14pt;
+  }
 }
