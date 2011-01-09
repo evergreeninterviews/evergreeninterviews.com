@@ -6,11 +6,6 @@
         <link rel="stylesheet" href="{{ STATIC_URL }}evergreeninterviews/css/master.css?1" type="text/css" media="screen" title="no title" charset="utf-8">
         {% block extra_head %}
         {% endblock %}
-        {% if debug %}
-            <style type="text/css" media="screen">
-                background-image: url("{{ STATIC_URL }}evergreeninterviews/images/logo-940x126.png");
-            </style>
-        {% endif %}
     </head>
     <body class="{% block body_class %}{% endblock %}">
         <div id="userinfo">
