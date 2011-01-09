@@ -6,7 +6,7 @@ urlpatterns = patterns('',
     url(regex=  u'^$',
         view=   'django.views.generic.simple.redirect_to',
         kwargs= dict(
-            url='/coupons/redeem/',
+            url='/coupons/',
             permanent=False,
         ),
     ),
