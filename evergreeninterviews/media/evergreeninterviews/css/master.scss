@@ -1,0 +1,43 @@
+@import "960-sass/reset.sass";
+@import "960-sass/text.sass";
+@import "960-sass/960.sass";
+
+body {
+  @extend .container-12;
+  font-size: 20px;
+}
+
+#header, #footer {
+  @extend .grid-12;
+}
+
+#header {
+  @extend .alpha;
+  @extend .omega;
+  background-image: url("/static/evergreeninterviews/images/logo-940x126.png");
+  background-position: 0px;
+  background-repeat: no-repeat;
+  background-size: 940px 126px;
+  h1 a {
+    display: block;
+    height: 126px;
+    text-indent: -9999px;
+  }
+  margin-bottom: 30px;
+}
+
+#content {
+  @extend .prefix-2;
+  @extend .grid-8;
+  @extend .suffix-2;
+}
+
+#footer {
+  @extend .alpha;
+  @extend .omega;
+  margin-top: 30px;
+  padding-left: 10px;
+  padding-top: 5px;
+  border-top: thin solid lightgrey;
+  font-size: 14px;
+}
