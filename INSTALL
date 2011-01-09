@@ -40,7 +40,7 @@ Create development database
     $ rm dev.db
 
     # Automatically creates user "admin" / "admin"
-    $ dm-evergreeninterviews syncdb --noinput
+    $ dm-evergreeninterviews syncdb --migrate --noinput
 
 
 Run development server
