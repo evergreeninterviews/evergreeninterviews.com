@@ -1,3 +1,4 @@
+{% load lazysignup_tags %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,13 +12,26 @@
             <h1><a href="">EvergreenInterviews</a></h1>
         </div>
         <div class="clear"></div>
+
+        {% if user|is_lazy_user and user.coupon_redemptions|length > 0 %}
+            <div id="conversion-message">
+                <div>
+                    Thank you for redeeming a coupon!
+                    <a href="{% url lazysignup_convert %}">Click here to create an account</a>
+                    to save your coupon.
+                </div>
+            </div>
+        {% endif %}
+
         <div id="content">
             {% block content %}
             {% endblock %}
         </div>
         <div class="clear"></div>
+
         <div id="footer">
             EvergreenInterviews &copy; 2011
         </div>
+        <div class="clear"></div>
     </body>
 </html>

@@ -2,6 +2,9 @@
 @import "960-sass/text.sass";
 @import "960-sass/960.sass";
 
+$gutter: 10px;
+$vertical-whitespace: 30px;
+
 body {
   @extend .container-12;
   font-size: 20px;
@@ -23,12 +26,31 @@ body {
     height: 126px;
     text-indent: -9999px;
   }
-  margin-bottom: 30px;
+  margin-bottom: $vertical-whitespace;
+}
+
+#conversion-message {
+  @extend .prefix-2;
+  @extend .alpha;
+  @extend .grid-8;
+  @extend .omega;
+  @extend .suffix-2;
+  div {
+    border: {
+      style: solid;
+      width: 5px;
+      color: lightgrey;
+    }
+    padding: $gutter;
+  }
+  margin-bottom: $vertical-whitespace;
 }
 
 #content {
   @extend .prefix-2;
+  @extend .alpha;
   @extend .grid-8;
+  @extend .omega;
   @extend .suffix-2;
   .coupons & {
     font-size: 18pt;
@@ -39,7 +61,6 @@ body {
   @extend .alpha;
   @extend .omega;
   margin-top: 30px;
-  padding-left: 10px;
   padding-top: 5px;
   border-top: thin solid lightgrey;
   font-size: 14px;

@@ -79,17 +79,17 @@ li {
 p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
   margin-bottom: 20px; }
 
-.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, #content, .grid-9, .grid-10, .grid-11, .grid-12, #header, #footer, .grid-13, .grid-14, .grid-15, .grid-16 {
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, #conversion-message, #content, .grid-9, .grid-10, .grid-11, .grid-12, #header, #footer, .grid-13, .grid-14, .grid-15, .grid-16 {
   display: inline;
   float: left;
   position: relative;
   margin-left: 10px;
   margin-right: 10px; }
 
-.alpha, #header, #footer {
+.alpha, #header, #conversion-message, #content, #footer {
   margin-left: 0; }
 
-.omega, #header, #footer {
+.omega, #header, #conversion-message, #content, #footer {
   margin-right: 0; }
 
 .container-16 {
@@ -110,7 +110,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     width: 340px; }
   .container-16 .grid-7 {
     width: 400px; }
-  .container-16 .grid-8, .container-16 #content {
+  .container-16 .grid-8, .container-16 #conversion-message, .container-16 #content {
     width: 460px; }
   .container-16 .grid-9 {
     width: 520px; }
@@ -130,7 +130,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     width: 940px; }
   .container-16 .prefix-1 {
     padding-left: 60px; }
-  .container-16 .prefix-2, .container-16 #content {
+  .container-16 .prefix-2, .container-16 #conversion-message, .container-16 #content {
     padding-left: 120px; }
   .container-16 .prefix-3 {
     padding-left: 180px; }
@@ -160,7 +160,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     padding-left: 900px; }
   .container-16 .suffix-1 {
     padding-right: 60px; }
-  .container-16 .suffix-2, .container-16 #content {
+  .container-16 .suffix-2, .container-16 #conversion-message, .container-16 #content {
     padding-right: 120px; }
   .container-16 .suffix-3 {
     padding-right: 180px; }
@@ -267,7 +267,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     width: 460px; }
   .container-12 .grid-7, body .grid-7 {
     width: 540px; }
-  .container-12 .grid-8, body .grid-8, .container-12 #content, body #content {
+  .container-12 .grid-8, body .grid-8, .container-12 #conversion-message, body #conversion-message, .container-12 #content, body #content {
     width: 620px; }
   .container-12 .grid-9, body .grid-9 {
     width: 700px; }
@@ -279,7 +279,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     width: 940px; }
   .container-12 .prefix-1, body .prefix-1 {
     padding-left: 80px; }
-  .container-12 .prefix-2, body .prefix-2, .container-12 #content, body #content {
+  .container-12 .prefix-2, body .prefix-2, .container-12 #conversion-message, body #conversion-message, .container-12 #content, body #content {
     padding-left: 160px; }
   .container-12 .prefix-3, body .prefix-3 {
     padding-left: 240px; }
@@ -301,7 +301,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     padding-left: 880px; }
   .container-12 .suffix-1, body .suffix-1 {
     padding-right: 80px; }
-  .container-12 .suffix-2, body .suffix-2, .container-12 #content, body #content {
+  .container-12 .suffix-2, body .suffix-2, .container-12 #conversion-message, body #conversion-message, .container-12 #content, body #content {
     padding-right: 160px; }
   .container-12 .suffix-3, body .suffix-3 {
     padding-right: 240px; }
@@ -401,12 +401,19 @@ body {
     height: 126px;
     text-indent: -9999px; }
 
+#conversion-message {
+  margin-bottom: 30px; }
+  #conversion-message div {
+    border-style: solid;
+    border-width: 5px;
+    border-color: lightgrey;
+    padding: 10px; }
+
 .coupons #content {
   font-size: 18pt; }
 
 #footer {
   margin-top: 30px;
-  padding-left: 10px;
   padding-top: 5px;
   border-top: thin solid lightgrey;
   font-size: 14px; }
