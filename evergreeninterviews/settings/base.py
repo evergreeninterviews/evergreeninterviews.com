@@ -4,7 +4,8 @@ from egwproject.settings.base import *
 ROOT_URLCONF = 'evergreeninterviews.urls.base'
 
 AUTHENTICATION_BACKENDS += (
-    'evergreeninterviews.backends.MaxTotalCouponRedemptionsBackend',
+    # Coupons
+    'evergreeninterviews.backends.CouponRedemptionBackend',
 )
 
 INSTALLED_APPS = (
