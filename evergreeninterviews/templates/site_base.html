@@ -8,13 +8,22 @@
         {% endblock %}
     </head>
     <body class="{% block body_class %}{% endblock %}">
+        {% if user.is_authenticated and not user|is_lazy_user %}
+            <div id="userinfo">
+                {% if not user|is_lazy_user %}
+                    Signed in as {{ user.username }}.
+                    <a href="{% url accounts_logout %}">Logout</a>
+                {% endif %}
+            </div>
+        {% endif %}
+
         <div id="header">
             <h1><a href="">EvergreenInterviews</a></h1>
         </div>
         <div class="clear"></div>
 
         {% block conversion_message %}
-            {% if user|is_lazy_user and user.coupon_redemptions|length > 0 %}
+            {% if user|is_lazy_user and user.coupon_redemptions.count > 0 %}
                 <div id="conversion-message">
                     <div>
                         Thank you for redeeming a coupon!
