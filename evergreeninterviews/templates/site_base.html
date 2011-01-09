@@ -13,15 +13,17 @@
         </div>
         <div class="clear"></div>
 
-        {% if user|is_lazy_user and user.coupon_redemptions|length > 0 %}
-            <div id="conversion-message">
-                <div>
-                    Thank you for redeeming a coupon!
-                    <a href="{% url lazysignup_convert %}">Click here to create an account</a>
-                    to save your coupon.
+        {% block conversion_message %}
+            {% if user|is_lazy_user and user.coupon_redemptions|length > 0 %}
+                <div id="conversion-message">
+                    <div>
+                        Thank you for redeeming a coupon!
+                        <a href="{% url lazysignup_convert %}">Click here to create an account</a>
+                        to save your coupon.
+                    </div>
                 </div>
-            </div>
-        {% endif %}
+            {% endif %}
+        {% endblock %}
 
         <div id="content">
             {% block content %}
