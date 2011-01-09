@@ -30,6 +30,9 @@ body {
   @extend .prefix-2;
   @extend .grid-8;
   @extend .suffix-2;
+  .coupons & {
+    font-size: 18pt;
+  }
 }
 
 #footer {

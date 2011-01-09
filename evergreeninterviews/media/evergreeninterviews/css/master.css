@@ -401,6 +401,9 @@ body {
     height: 126px;
     text-indent: -9999px; }
 
+.coupons #content {
+  font-size: 18pt; }
+
 #footer {
   margin-top: 30px;
   padding-left: 10px;
